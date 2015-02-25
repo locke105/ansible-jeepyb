@@ -1,0 +1,14 @@
+---
+# Make sure to override these!
+# They are just examples pulled from manage-projects.py
+#gerrit_projects_homepage: http://openstack.org
+#gerrit_projects_host: review.openstack.org
+#gerrit_projects_user: gerrit2
+#gerrit_projects_committer: "Project Creator <openstack-infra@lists.openstack.org>"
+#gerrit_projects_key: /home/gerrit2/review_site/etc/ssh_host_rsa_key
+#gerrit_projects_system_user: gerrit2
+#gerrit_projects_system_group: gerrit2
+
+# less likely to need to override these
+gerrit_projects_state_path: /etc/gerrit_projects
+gerrit_projects_acl_dir: /etc/gerrit_projects/projects/acls

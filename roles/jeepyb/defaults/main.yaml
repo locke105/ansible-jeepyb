@@ -1,0 +1,3 @@
+---
+jeepyb_local_git_dir: '/var/lib/jeepyb/git'
+jeepyb_cache_dir: '/var/lib/jeepyb/cache'

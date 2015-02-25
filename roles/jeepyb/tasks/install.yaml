@@ -1,0 +1,32 @@
+---
+- name: install paramiko
+  yum:
+    name: python-paramiko
+    state: present
+- name: install gcc
+  yum:
+    name: gcc
+    state: present
+- name: install pyyaml
+  yum:
+    name: PyYAML
+    state: present
+- name: install mysql-python
+  yum:
+    name: MySQL-python
+    state: present
+- include: get_pip.yaml
+- name: get latest jeepyb
+  git:
+    repo: https://github.com/openstack-infra/jeepyb.git
+    version: master
+    dest: /opt/jeepyb
+  register: jeepyb_repo
+- name: install jeepyb
+  pip:
+    name: '/opt/jeepyb'
+    state: present
+  #command: 'python setup.py install'
+  #args:
+  #  chdir: '/opt/jeepyb'
+  #when: jeepyb_repo.changed

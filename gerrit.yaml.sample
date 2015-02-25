@@ -1,0 +1,16 @@
+---
+- hosts: my_gerrit
+  sudo: true
+  vars:
+    gerrit_projects_repo_url: http://github.com/locke105/gerrit-projects.git
+    gerrit_projects_homepage: http://my.awesome.gerrit.example.com/
+    gerrit_projects_host: my.awesome.gerrit.example.com
+    gerrit_projects_user: gerrit
+    gerrit_projects_committer: 'gerrit <gerrit@gerrit>'
+    gerrit_projects_key: /home/gerrit2/.ssh/id_gerrit_rsa
+    gerrit_projects_system_user: gerrit2
+    gerrit_projects_system_group: gerrit2
+    gerrit_config_path: /home/gerrit2/etc/gerrit.config
+    gerrit_secure_config_path: /home/gerrit2/etc/secure.config
+  roles:
+    - gerrit_projects

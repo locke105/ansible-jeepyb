@@ -1,0 +1,8 @@
+---
+- include: install.yaml
+- name: build state directory
+  file:
+    path: /var/lib/jeepyb
+    state: directory
+    owner: root
+    group: root
