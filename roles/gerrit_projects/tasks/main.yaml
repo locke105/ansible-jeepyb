@@ -5,7 +5,6 @@
     dest: "{{ gerrit_projects_state_path }}/projects"
     version: master
   register: projects_repo
-- debug: var=projects_repo
 - name: setup projects.ini
   template:
     src: projects.ini.j2
@@ -19,4 +18,4 @@
     PROJECTS_INI={{ gerrit_projects_state_path }}/projects.ini \
     PROJECTS_YAML={{ gerrit_projects_state_path }}/projects/projects.yaml \
     manage-projects -d >> /var/log/manage_projects.log 2>&1
-#  when: projects_repo.changed
+  when: projects_repo.changed or gerrit_projects_always_manage_projects

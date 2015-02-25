@@ -26,7 +26,3 @@
   pip:
     name: '/opt/jeepyb'
     state: present
-  #command: 'python setup.py install'
-  #args:
-  #  chdir: '/opt/jeepyb'
-  #when: jeepyb_repo.changed

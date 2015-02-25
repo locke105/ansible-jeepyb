@@ -12,3 +12,4 @@
 # less likely to need to override these
 gerrit_projects_state_path: /etc/gerrit_projects
 gerrit_projects_acl_dir: /etc/gerrit_projects/projects/acls
+gerrit_projects_always_manage_projects: false
